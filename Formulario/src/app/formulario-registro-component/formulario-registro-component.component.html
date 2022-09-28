@@ -1,0 +1,65 @@
+
+<div class="margen">
+  <h1 class="margen"> FORMULARIO DE REGISTRO</h1>
+<div class="example-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Ingresa tu nombre</mat-label>
+    <input matInput placeholder="Pedro" [formControl]="nombre" required>
+
+  </mat-form-field>
+</div>
+<div class="example-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Ingresa tu apellido</mat-label>
+    <input matInput placeholder="Creyson LoRo" [formControl]="apellidos" required>
+
+  </mat-form-field>
+</div>
+
+<div class="example-container" >
+  <mat-form-field appearance="fill">
+    <mat-label>Ingresa tu nif</mat-label>
+    <input matInput placeholder="123454764H" [formControl]="nif" required>
+
+  </mat-form-field>
+</div>
+
+<div class="example-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Ingresa tu teléfono</mat-label>
+    <input matInput placeholder="622886217" [formControl]="telefono" required>
+
+  </mat-form-field>
+</div>
+
+<div class="example-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Ingresa tu email</mat-label>
+    <input matInput placeholder="pat@example.com" [formControl]="email" required>
+
+  </mat-form-field>
+</div>
+
+<div class="example-container">
+    <mat-radio-group [formControl]="sexo" >
+      <mat-radio-button value="1">Masculino </mat-radio-button>
+      <mat-radio-button value="2">Femenino </mat-radio-button>
+    </mat-radio-group>
+</div>
+<div class="example-container">
+<mat-form-field appearance="fill">
+  <mat-label>¿Como conocio el sitio?</mat-label>
+  <mat-select [formControl]="opcion" >
+
+    <mat-option *ngFor="let o of opciones" [value]="o">{{o}}</mat-option>
+  </mat-select>
+</mat-form-field>
+</div>
+<div class="example-container">
+  <mat-checkbox [formControl]="checked">
+  acepto los terminos y condiciones
+    </mat-checkbox>
+</div>
+</div>
+
+
