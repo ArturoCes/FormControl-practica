@@ -8,13 +8,16 @@ import { PokemonPruebaService } from 'src/app/services/pokemon-prueba.service';
 })
 export class PokemonListComponent implements OnInit {
   listadoPokemon: Pokemon[] = [];
-  constructor(private pokemonService: PokemonPruebaService) {}
+  constructor(private pokemonService: PokemonPruebaService) { }
 
-  ngOnInit(): void {}
-
-  mostrarPokemons() {
+  ngOnInit(): void {
     this.pokemonService.pokemonList().subscribe((response) => {
       this.listadoPokemon = response.results;
     });
+  }
+
+    mostrarImagen(url:string){
+    let pokeurl='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
+      return `${pokeurl}${url.split('/')[6]}.png` ;
   }
 }
