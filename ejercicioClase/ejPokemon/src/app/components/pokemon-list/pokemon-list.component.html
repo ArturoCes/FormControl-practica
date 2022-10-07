@@ -1,7 +1,7 @@
 <div *ngFor="let pokemon of listadoPokemon">
   <mat-card style="background-color: skyblue; width:400px; padding: 30px; margin:2em">
     <mat-card-title>{{ pokemon.name }}</mat-card-title>
-    <p>{{ pokemon.url }}</p>
+
     <img [src]="mostrarImagen(pokemon.url)" />
   </mat-card>
 </div>
