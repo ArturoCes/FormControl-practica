@@ -1,6 +1,5 @@
 <h1>STAR Wars people</h1>
 
 <ul *ngFor="let people of peopleList">
-  <li>{{people.name}}</li>
-  <li >{{people.url}}</li>
+  <app-people-item [item]="people"></app-people-item>
 </ul>

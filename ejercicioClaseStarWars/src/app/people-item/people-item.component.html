@@ -1,0 +1,12 @@
+<mat-card
+  style="
+    margin: auto;
+    background-color: skyblue;
+    font-family: 'Comic Sans Ms';
+    width: max-content;
+  "
+>
+  <li>{{ item.name }}</li>
+  <p *ngFor="let film of filmList">{{ film.title }}</p>
+  <img [src]="getUrlImagen(item.url)" />
+</mat-card>

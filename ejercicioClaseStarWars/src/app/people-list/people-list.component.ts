@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { People } from '../interfaces/people.interface';
+import { Film, People } from '../interfaces/people.interface';
 import { PeopleService } from '../services/people.service';
 
 @Component({
@@ -9,9 +9,9 @@ import { PeopleService } from '../services/people.service';
 })
 export class PeopleListComponent implements OnInit {
 
-  peopleList:People[] = [];
-  
-  constructor(private peopleService:PeopleService) { }
+  peopleList: People[] = [];
+  filmList: Film[] = [];
+  constructor(private peopleService: PeopleService) { }
 
   ngOnInit(): void {
     this.peopleService.getPeople().subscribe((resp) => {
