@@ -12,6 +12,6 @@ export class StarwarService {
   constructor(private http:HttpClient) { }
 
   public getFilms():Observable<FilmsResponse>{
-    return this.http.get(`${API_BASE_URL}/films/`)
+    return this.http.get<FilmsResponse>(`${API_BASE_URL}/films/`)
   }
 }
