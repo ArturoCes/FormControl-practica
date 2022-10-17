@@ -14,7 +14,8 @@ import { FilmsComponent } from './components/films-list/films-list.component';
 import { CharactersListComponent } from './components/characters-list/characters-list.component';
 import { MaterialImportsModule } from './modules/material-imports.interface';
 import { HttpClientModule } from '@angular/common/http';
-import { NewPeopleComponentComponent } from './components/new-people-component/new-people-component';
+import { NewPeopleComponent } from './components/new-people-component/new-people-component';
+import { EditPeopleComponent } from './components/edit-people-component/edit-people-component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { NewPeopleComponentComponent } from './components/new-people-component/n
     StarshipListComponent,
     PgPrincipalComponent,
     VehiclesListComponent,
-    NewPeopleComponentComponent,
+    NewPeopleComponent,
+    EditPeopleComponent
 
 
   ],
