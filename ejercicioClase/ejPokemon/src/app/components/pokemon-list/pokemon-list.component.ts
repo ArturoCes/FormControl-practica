@@ -22,8 +22,10 @@ export class PokemonListComponent implements OnInit {
       return 'https://elvortex.com/wp-content/uploads/2018/03/HddtBOT-e1520478229723.png'
     }else {
       let pokeurl =
-      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
-    return `${pokeurl}${url.split('/')[6]}.png`;
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/';
+     /*  let pokeurl = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
+      return `${pokeurl}${url.split('/')[6]}.png`; */
+    return `${pokeurl}${url.split('/')[6]}.gif`;
     }
 
 
