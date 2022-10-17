@@ -1,23 +1,16 @@
-<div *ngFor="let pokemon of listadoPokemon">
-  <mat-card
-    style="background-color: skyblue; width: 400px; padding: 30px; margin: 2em"
-  >
-    <mat-card-title>{{ pokemon.name }}</mat-card-title>
 
-    <img [src]="mostrarImagen(pokemon.url)" />
-  </mat-card>
+<mat-form-field appearance="fill">
+  <mat-label>Select me</mat-label>
+  <mat-select name="miselect" [(ngModel)]="poke">
+    <mat-option [value]="pokemon" *ngFor="let pokemon of listadoPokemon">
+      {{ pokemon.name }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-card
+style="background-color: skyblue; width: max-content; padding: 30px; margin: 2em"
+>
+<mat-card-title>{{ poke!=null?poke.name:"" }}</mat-card-title>
 
-  <p>
-    <select name="miselect" [(ngModel)]="listadoPokemon" multiple="multiple">
-      <option [value]="pokemon" *ngFor="let pokemon of listadoPokemon">
-        {{ pokemon }}
-      </option>
-    </select>
-  </p>
-
-  <ul>
-    <li *ngFor="let pokemon of listadoPokemon">
-      {{ pokemon }}
-    </li>
-  </ul>
-</div>
+<img [src]="mostrarImagen(poke!=null?poke.url:'')" width="300px" height="300px"/>
+</mat-card>
