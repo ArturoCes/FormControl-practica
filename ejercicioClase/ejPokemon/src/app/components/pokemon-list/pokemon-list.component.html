@@ -1,7 +1,23 @@
 <div *ngFor="let pokemon of listadoPokemon">
-  <mat-card style="background-color: skyblue; width:400px; padding: 30px; margin:2em">
+  <mat-card
+    style="background-color: skyblue; width: 400px; padding: 30px; margin: 2em"
+  >
     <mat-card-title>{{ pokemon.name }}</mat-card-title>
 
     <img [src]="mostrarImagen(pokemon.url)" />
   </mat-card>
+
+  <p>
+    <select name="miselect" [(ngModel)]="listadoPokemon" multiple="multiple">
+      <option [value]="pokemon" *ngFor="let pokemon of listadoPokemon">
+        {{ pokemon }}
+      </option>
+    </select>
+  </p>
+
+  <ul>
+    <li *ngFor="let pokemon of listadoPokemon">
+      {{ pokemon }}
+    </li>
+  </ul>
 </div>

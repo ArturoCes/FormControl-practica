@@ -20,5 +20,6 @@ export class PokemonListComponent implements OnInit {
     let pokeurl =
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
     return `${pokeurl}${url.split('/')[6]}.png`;
+    
   }
 }

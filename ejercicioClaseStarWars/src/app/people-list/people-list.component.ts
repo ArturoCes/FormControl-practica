@@ -5,18 +5,16 @@ import { PeopleService } from '../services/people.service';
 @Component({
   selector: 'app-people-list',
   templateUrl: './people-list.component.html',
-  styleUrls: ['./people-list.component.css']
+  styleUrls: ['./people-list.component.css'],
 })
 export class PeopleListComponent implements OnInit {
-
   peopleList: People[] = [];
-  filmList: Film[] = [];
-  constructor(private peopleService: PeopleService) { }
+
+  constructor(private peopleService: PeopleService) {}
 
   ngOnInit(): void {
     this.peopleService.getPeople().subscribe((resp) => {
       this.peopleList = resp.results;
     });
   }
-
 }
