@@ -1,5 +1,5 @@
-
-<mat-form-field appearance="fill">
+<div class="eo">
+<mat-form-field appearance="fill" >
   <mat-label>Select me</mat-label>
   <mat-select name="miselect" [(ngModel)]="poke">
     <mat-option [value]="pokemon" *ngFor="let pokemon of listadoPokemon">
@@ -8,9 +8,19 @@
   </mat-select>
 </mat-form-field>
 <mat-card
-style="background-color: skyblue; width: max-content; padding: 30px; margin: 2em"
+  style="
+    background-color: skyblue;
+    width: max-content;
+    padding: 30px;
+    margin: 2em;
+  "
 >
-<mat-card-title>{{ poke!=null?poke.name:"" }}</mat-card-title>
+  <mat-card-title>{{ poke != null ? poke.name : "" }}</mat-card-title>
 
-<img [src]="mostrarImagen(poke!=null?poke.url:'')" width="300px" height="300px"/>
+  <img
+    [src]="mostrarImagen(poke != null ? poke.url : '')"
+    width="300px"
+    height="300px"
+  />
 </mat-card>
+</div>

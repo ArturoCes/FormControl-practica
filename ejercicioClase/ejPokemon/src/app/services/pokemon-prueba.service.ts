@@ -13,7 +13,7 @@ export class PokemonPruebaService {
   constructor(private http:HttpClient) { }
 
   public pokemonList():Observable<PokemonResponse>{
-   return this.http.get<PokemonResponse>(`${API_BASE_URL}/pokemon?limit=50`);
+   return this.http.get<PokemonResponse>(`${API_BASE_URL}/pokemon?limit=151`);
   }
 
   public getPokemon(id:string){

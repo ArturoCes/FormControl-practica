@@ -31,6 +31,6 @@ export class PokemonListComponent implements OnInit {
 
   }
   seleccionarPokemon(pokemon:Pokemon){
-    this.poke=pokemon;
+      this.poke=pokemon;
   }
 }
