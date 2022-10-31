@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { PeopleDetailResponse } from 'src/app/interfaces/people-detail.interface';
 import { People,  } from 'src/app/interfaces/people.interfaces';
 import { PeopleService } from 'src/app/services/people.service';
-import { environment } from 'src/environments/environment';
+import { DialogsComponent } from '../dialogs/dialogs.component';
+
 
 @Component({
   selector: 'app-people-list',
@@ -12,8 +15,9 @@ export class PeopleListComponent implements OnInit {
 
   peopleList: People[] = [];
   numPages=0;
+  peopleSelected: PeopleDetailResponse | undefined;
 
-  constructor(private peopleService: PeopleService) { }
+  constructor(private peopleService: PeopleService,public dialog: MatDialog)  { }
 
 
   ngOnInit(): void {
@@ -39,5 +43,16 @@ export class PeopleListComponent implements OnInit {
 
     return `https://image.tmdb.org/t/p/w500/${people.profile_path}`;
   }
+  getPeopleInfo(people: People) {
+    this.peopleService.getPeopleDetail(people).subscribe(response => {
+      this.peopleSelected = response;
+      this.dialog.open(DialogsComponent, {
+        data: {
+          peopleInfo: this.peopleSelected,
+          color: '#FF0000'
+        },
+      });
+    });
 
+}
 }

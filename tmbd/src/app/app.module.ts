@@ -8,13 +8,15 @@ import { PeopleListComponent } from './components/people-list/people-list.compon
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialsImportModule } from './material-imports/material-imports.module';
 import { FormsModule } from '@angular/forms';
+import { DialogsComponent } from './components/dialogs/dialogs.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PeopleListComponent
+    PeopleListComponent,
+    DialogsComponent
   ],
   imports: [
     BrowserModule,
