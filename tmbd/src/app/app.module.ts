@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PeopleListComponent } from './components/people-list/people-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialsImportModule } from './material-imports/material-imports.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DialogsComponent } from './components/dialogs/dialogs.component';
 
 
@@ -24,7 +24,8 @@ import { DialogsComponent } from './components/dialogs/dialogs.component';
     BrowserAnimationsModule,
     HttpClientModule,
     MaterialsImportModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
